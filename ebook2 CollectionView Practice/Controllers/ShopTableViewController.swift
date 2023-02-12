@@ -90,27 +90,9 @@ class ShopTableViewController: UITableViewController {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ShopTableViewCell.self)", for: indexPath) as? ShopTableViewCell else {fatalError("dequeueReusableCell ShopTableViewCell Failed")}
         
-        let shop = shops[indexPath.section]
-        let attraction = shop.attractions[indexPath.row]
+        let attraction = shops[indexPath.section].attractions[indexPath.item]
         
-        cell.accessoryType = .disclosureIndicator
-        
-        cell.shopImageView.image = UIImage(named: attraction.photo)
-        cell.nameLabel.text = attraction.name
-        cell.chineseName.text = attraction.chineseName
-        
-        cell.shopImageView.frame = CGRect(x: 20, y: 10, width: 188, height: 133)
-        cell.shopImageView.contentMode = .scaleAspectFill
-        
-        cell.nameLabel.frame = CGRect(x: 210, y: 40, width: 160, height: 44)
-        cell.nameLabel.numberOfLines = 0
-        cell.nameLabel.font = .systemFont(ofSize: 18, weight: .semibold)
-        //cell.nameLabel.backgroundColor = .gray
-        
-        cell.chineseName.frame = CGRect(x: 210, y: 84, width: 160, height: 44)
-        cell.chineseName.numberOfLines = 0
-        cell.chineseName.font = .systemFont(ofSize: 16, weight: .medium)
-        //cell.chineseName.backgroundColor = .lightGray
+        cell.updateUI(with: attraction)
         
         return cell
     }
