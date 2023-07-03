@@ -85,7 +85,6 @@ class ShopTableViewController: UITableViewController {
         return shop.attractions.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ShopTableViewCell.self)", for: indexPath) as? ShopTableViewCell else {fatalError("dequeueReusableCell ShopTableViewCell Failed")}

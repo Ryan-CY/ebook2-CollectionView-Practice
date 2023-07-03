@@ -59,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7723F82A2A53087F00A9C734 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77688CF129973BC1007C366F /* Shop.swift */,
+				77688CEB299739FA007C366F /* Attraction.swift */,
+				77BDE34729961EED000B8E65 /* Spot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		77BDE323299616AD000B8E65 = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +92,7 @@
 				77BDE331299616AD000B8E65 /* SceneDelegate.swift */,
 				77EADDEA29979AE400524CD0 /* Controllers */,
 				77EADDEB29979B6500524CD0 /* Views */,
-				77688CF129973BC1007C366F /* Shop.swift */,
-				77688CEB299739FA007C366F /* Attraction.swift */,
-				77BDE34729961EED000B8E65 /* Spot.swift */,
+				7723F82A2A53087F00A9C734 /* Model */,
 				77BDE335299616AD000B8E65 /* Main.storyboard */,
 				77BDE338299616AD000B8E65 /* Assets.xcassets */,
 				77BDE33A299616AD000B8E65 /* LaunchScreen.storyboard */,
